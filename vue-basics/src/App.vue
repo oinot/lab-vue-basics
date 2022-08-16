@@ -33,7 +33,7 @@ export default {
 }
 
 body {
-  width: 300px;
+  width: 600px;
   height: auto;
   margin: 5vh auto;
 }
