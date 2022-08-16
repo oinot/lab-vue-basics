@@ -35,7 +35,7 @@ export default {
 body {
   width: 300px;
   height: auto;
-  margin: 20% auto;
+  margin: 5vh auto;
 }
 
 </style>

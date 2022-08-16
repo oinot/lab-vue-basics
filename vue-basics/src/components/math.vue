@@ -1,6 +1,9 @@
 <template>
   <div class="content">
-    <h3> if today is {{ today }}, <br> tomorrow will be the {{ tomorrow }}</h3>
+    <p v-if="isTrue = true">This is true:</p>
+    <h3> if today is the {{ today }}, <br> tomorrow will be the {{ tomorrow }}</h3>
+    <p>{{ printSomething() }}</p>
+
   </div>
 </template>
 
@@ -8,13 +11,18 @@
 export default {
   name: 'tomorrowIs',
   props: {
-    msg: String,
   },
   data() {
     return {
       today: new Date().getDate([0]),
       tomorrow: new Date().getDate([0]) + 1,
+      isTrue: true,
     };
+  },
+  methods: {
+    printSomething() {
+      return 'without a doubt';
+    },
   },
 };
 </script>
@@ -30,6 +38,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 </style>
