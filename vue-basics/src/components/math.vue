@@ -1,5 +1,7 @@
 <template>
-  <div class="content">
+  <div class="tommorrow-is">
+    <h1> Today's date is:</h1>
+    <h2>{{ date }}</h2>
     <p v-if="isTrue = true">This is true:</p>
     <h3> if today is the {{ today }}, <br> tomorrow will be the {{ tomorrow }}</h3>
     <p>{{ printSomething() }}</p>
@@ -14,6 +16,7 @@ export default {
   },
   data() {
     return {
+      date: new Date(),
       today: new Date().getDate([0]),
       tomorrow: new Date().getDate([0]) + 1,
       isTrue: true,
@@ -32,9 +35,9 @@ export default {
 h3 {
   margin: 10px 0 0;
 }
-.content {
+.tommorrow-is {
   color: aliceblue;
-  height: 200px;
+  min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;

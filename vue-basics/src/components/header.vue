@@ -1,9 +1,10 @@
 <template>
     <nav>
+    <h1>This is a Header</h1>
     <router-link to="/">{{ home }}</router-link> |
     <router-link to="/about">{{ about }}</router-link>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
@@ -34,7 +35,7 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
+a, h1 {
   color: #42b983;
 }
 
